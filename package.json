@@ -1,0 +1,28 @@
+{
+  "name": "monk-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcsan/monk-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcsan/monk-test/issues"
+  },
+  "homepage": "https://github.com/dcsan/monk-test#readme",
+  "dependencies": {
+    "console.table": "^0.4.0",
+    "fs": "0.0.2",
+    "jasmine": "^2.3.2",
+    "mongodb": "^2.0.42",
+    "monk": "^1.0.1",
+    "path": "^0.11.14",
+    "underscore": "^1.8.3"
+  }
+}

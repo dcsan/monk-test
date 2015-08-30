@@ -1,0 +1,27 @@
+{
+    "buildOnSave": true,
+    "scripts": {
+        "postbuild": "echo after building"
+    },
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": true,
+        "noImplicitAny": false,
+        "removeComments": false,
+        "noLib": false,
+        "sourceMap": true,
+        "newLine": "LF"
+    },
+    "filesGlob": [
+        "./src/**/*.ts",
+        "./src/*.ts",
+        "!./node_modules/**/*.ts"
+    ],
+    "files": [
+        "./src/app.d.ts",
+        "./src/app.ts",
+        "./src/utils/FileReader.d.ts",
+        "./src/utils/FileReader.ts"
+    ]
+}
