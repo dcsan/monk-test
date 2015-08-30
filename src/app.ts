@@ -12,7 +12,6 @@ var coll = db.get("test-collection");
 coll.remove({});  // careful this is async too!
 
 var p1, p2;
-var finder = { category: "test" };
 
 
 p1 = coll.insert(raw[0]);
@@ -20,6 +19,7 @@ console.log("p1.type", p1.type);
 
 p1.on("success", function(doc) {
 	console.log(">> insert.success", doc);
+    var finder = { category: "test" };
     var p2 = coll.find(finder);
     console.log("p2.type", p2.type);
 
@@ -27,7 +27,7 @@ p1.on("success", function(doc) {
         this.log("found", c);
         db.close();
     })
-    
+
 	db.close();
 })
 
@@ -38,7 +38,6 @@ p1.on("complete", function(doc) {
 p1.on("error", function(doc) {
 	console.log("success", doc);
 })
-
 
 
 console.log(p2)
