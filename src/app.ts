@@ -23,12 +23,16 @@ p1.on("success", function(doc) {
     var p2 = coll.find(finder);
     console.log("p2.type", p2.type);
 
-    p2.on("find.success", function (c) {
-        this.log("found", c);
+    // p2.on("success", function (c) {
+    //     console.log("found", c);
+    //     db.close();
+    // })
+
+    p2.on("success", (c) => {
+        console.log("found", c);
         db.close();
     })
 
-	db.close();
 })
 
 p1.on("complete", function(doc) {
